@@ -1,0 +1,156 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general layout */
+body {
+    font-family: Arial,sans-serif;
+    background-color: burlywood;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav1 {
+    font-style: normal;
+    font-size:xx-large;
+    padding: 500px;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align:left;
+}
+
+nav ul {
+    list-style-type:none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration:black;
+    font-size: 20px;
+}
+
+/* Container for all content */
+.container {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.section {
+    background-color:azure;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Projects Section: Flexbox layout */
+.projects-container {
+    display: flow-root;
+    justify-content: space-evenly;
+    gap: 30px;
+    color: black;
+}
+
+.project-card {
+    background-color: burlywood;
+    padding: 20px;
+    border-radius: 4px;
+    flex-basis: 30%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 720px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title> My Digital Portfolio</title>
+    <link rel="stylesheet" href="protfolio.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+     <nav1>
+    <a href="#Protfolio">My Digital Protfolio </a>
+     </nav1>
+    <nav>
+        <ul>
+            <li><a href="#aboutMe">About Me | </a></li>
+            <li><a href="#projects">Projects |</a></li>
+            <li><a href="#skills">Skills |</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Hi,I'm a passionate web developer and building responsive and experience in creating modern websites and applications...</p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>Project 1: Personal Website</h3>
+                    <p>Create a simple website to showcase your skills and experience.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2: To-Do List App</h3>
+                    <p>Build a basic to-do list app using HTML,CSS,JS.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 3: Quiz Game</h3>
+                    <p>Build a quiz game that tests user's knowledge on a particular topic</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ol>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Responsive web design</li>
+                <li>Python, Django</li>
+                <li>React, Node.js</li>
+            </ol>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email me at <a href="mailto:portfolio@example.com">protfolio@example.com</a></p></p>
+          
+        </section>
+    </div>
+
+</body>
+</html>
